@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./App.css";
+import css from "./App.module.css";
 import { requestImagesByQuery } from "./services/api";
 import SearchBar from "./components/SearchBar/SearchBar";
 import Loader from "./components/Loader/Loader";
@@ -62,7 +62,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className={css.container}>
       <SearchBar onSubmit={onSetSearchQuery} />
       {isLoading && <Loader />}
       {isError && <ErrorMessage />}
