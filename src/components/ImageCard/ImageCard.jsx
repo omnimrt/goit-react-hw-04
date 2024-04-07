@@ -5,7 +5,7 @@ const ImageCard = ({ image, onClick }) => {
     onClick(image);
   };
   return (
-    <div onClick={onClick} className={css.container}>
+    <div className={css.container}>
       <img
         src={image.urls.small}
         alt={image.alt_description}
